@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cyberbullying Detection</title>
+
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+	<header>
+		<!-- <div class="container">
+		<div id="brandname">
+			CB DETECT APP
+		</div>
+		<h2>Cyberbuying Tweets Detector</h2>
+		
+	</div> -->
+	<nav class="container">
+       
+        <img src="{{url_for('static', filename='images/logo lmu hz.png')}}" alt="SPGWAS" class="nav-logo">
+        <!-- <img src="../images/logo lmu hz.png" alt="SPGWAS" / class="nav-logo"> -->
+        
+      </nav>
+      <div class="hero-container container">
+        <h1>CYBERBULLYING DETECTOR</h1>
+        <p style="text-align: center; color: white; font-size: 20;"> Precision-Driven Sentiment Analysis: Enhancing User Experience Through Advanced Machine Learning</p>
+
+        <div class="hero-cta">
+          <a href="#mlform" class="btn primary-cta">RUN COMMENT</a>
+          <!-- <a href="#" class="btn primary-cta2">RUN WORKFLOW</a> -->
+        </div>
+        
+          
+          
+   
+           
+
+        <!-- <img
+          src="../images/sysbiollaptop.png"
+          class="hero-img"
+          alt="CB Laptop"
+        /> -->
+      </div>
+      <img src="{{url_for('static', filename='images/Ellipse1.svg')}}" class="svg-1" >
+      <img src="{{url_for('static', filename='images/Ellipse2.svg')}}" class="svg-2" >
+      <img src="{{url_for('static', filename='images/Ellipse3.svg')}}" class="svg-3" >
+      <!-- <img src="../images/Ellipse1.svg" class="svg-1" />
+      <img src="../images/Ellipse2.svg" class="svg-2" />
+      <img src="../images/Ellipse3.svg" class="svg-3" /> -->
+	</header>
+
+	<section class="ml-container" id="mlform">
+		<div></div>
+		<form action="{{ url_for('predict')}}" method="POST">
+			<p>ENTER COMMENT HERE</p>
+			<!-- <input type="text" name="comment"/> -->
+			<textarea name="comment" rows="4" cols="50"></textarea>
+			<br/>
+	
+			<input type="submit" class="btn-full" value="DETECT">
+			
+		</form>
+		<div></div>
+	</section>
+
+
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<header>
+		<!-- <div class="container">
+		<div id="brandname">
+			CB DETECT APP
+		</div>
+		<h2>Cyberbuying Tweets Detector</h2>
+		
+	</div> -->
+	<nav class="container">
+        <div class="left-nav">
+        </div>
+		<a href="http://127.0.0.1:5000/"> <img src="{{url_for('static', filename='images/logo lmu hz.png')}}" alt="SPGWAS" class="nav-logo"></a>
+       
+        <!-- <img src="../images/logo lmu hz.png" alt="SPGWAS" / class="nav-logo"> -->
+        <div class="right-nav">
+        </div>
+      </nav>
+      <div class="hero-container container">
+        <h1>The Comment is Detected to be</h1>
+        
+		<div class="results">
+			{% if prediction == 1%}
+			<h2 style="color:rgb(191, 255, 0);">BULLYING</h2>
+			{% elif prediction == 0%}
+			<h2 style="color:rgb(255, 255, 255);">NOT BULLYING</h2>
+			{% endif %}
+		</div>
+
+        
+
+      </div>
+	</header>
+
+</body>
+</html>
